@@ -1,6 +1,6 @@
 # PSR-15 HTTP Server Middleware Components
 
-This is a curated (most likely not complete) list of **HTTP Server Middleware Components** according to [PSR-15](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-15-request-handlers.md).
+This is a curated (most likely not complete) list of **[PSR-15](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-15-request-handlers.md) HTTP Server Middleware Components**.
  
 ### Authentication
 
@@ -172,7 +172,7 @@ This is a curated (most likely not complete) list of **HTTP Server Middleware Co
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/grafikart/psr15-csrf-middleware.svg?style=plastic)](https://packagist.org/packages/grafikart/psr15-csrf-middleware)
     ![GitHub last commit](https://img.shields.io/github/last-commit/Grafikart/PSR15-CsrfMiddleware.svg?style=plastic)
     ![License](https://img.shields.io/packagist/l/grafikart/psr15-csrf-middleware?style=plastic)<br>
-    Checks every POST, PUT or DELETE request for a CSRF token. Tokens are persisted using an `ArrayAccess` compatible session and are generated on demand.
+    Checks every `POST`, `PUT` or `DELETE` request for a CSRF token. Tokens are persisted using an `ArrayAccess` compatible session and are generated on demand.
 * [Middlewares](https://github.com/middlewares)/**[Firewall](https://github.com/middlewares/firewall)**
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/firewall.svg?style=plastic)](https://packagist.org/packages/middlewares/firewall)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/firewall.svg?style=plastic)
@@ -218,7 +218,7 @@ This is a curated (most likely not complete) list of **HTTP Server Middleware Co
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/base-path.svg?style=plastic)](https://packagist.org/packages/middlewares/base-path)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/base-path.svg?style=plastic)
     ![License](https://img.shields.io/packagist/l/middlewares/base-path.svg?style=plastic)<br>
-    Removes the prefix from the URI path of the request. This is useful to combine with routers if the root of the website is in a subdirectory. For example, if the root of your website is `/web/public`, a request with the uri `/web/public/post/34` will be converted to `/post/34`.
+    Removes the prefix from the URI path of the request. This is useful to combine with routers if the root of the website is in a subdirectory. For example, if the root of the website is `/web/public`, a request with the uri `/web/public/post/34` will be converted to `/post/34`.
 * [Middlewares](https://github.com/middlewares)/**[Https](https://github.com/middlewares/https)**
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/https.svg?style=plastic)](https://packagist.org/packages/middlewares/https)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/https.svg?style=plastic)
@@ -233,7 +233,7 @@ This is a curated (most likely not complete) list of **HTTP Server Middleware Co
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/trailing-slash.svg?style=plastic)](https://packagist.org/packages/middlewares/trailing-slash)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/trailing-slash.svg?style=plastic)
     ![License](https://img.shields.io/packagist/l/middlewares/trailing-slash.svg?style=plastic)<br>
-    Normalizes the trailing slash of the URI path. By default removes the slash so, for example, `/post/23/` is converted to `/post/23`. Useful if you have problems with the router.
+    Normalizes the trailing slash of the URI path. By default removes the slash so, for example, `/post/23/` is converted to `/post/23`.
 * [Middlewares](https://github.com/middlewares)/**[Www](https://github.com/middlewares/www)**
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/www.svg?style=plastic)](https://packagist.org/packages/middlewares/www)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/www.svg?style=plastic)
@@ -272,5 +272,3 @@ This is a curated (most likely not complete) list of **HTTP Server Middleware Co
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/proxy.svg?style=plastic)
     ![License](https://img.shields.io/packagist/l/middlewares/proxy.svg?style=plastic)<br>
     Creates an HTTP proxy using [Guzzle](https://github.com/guzzle/guzzle).
-
-## New
