@@ -218,12 +218,12 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/base-path.svg?style=plastic)](https://packagist.org/packages/middlewares/base-path)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/base-path.svg?style=plastic)
     ![License](https://img.shields.io/packagist/l/middlewares/base-path.svg?style=plastic)<br>
-    Removes the prefix from the URI path of the request. This is useful to combine with routers if the root of the website is in a subdirectory. For example, if the root of the website is `/web/public`, a request with the uri `/web/public/post/34` will be converted to `/post/34`.
+    Removes the prefix from the URI path of the request. This is useful to combine with routers if the root of the website is in a subdirectory. For example, if the root of the website is `/web/public`, a request with the URI `/web/public/posts/34` will be converted to `/posts/34`.
 * [Middlewares](https://github.com/middlewares)/**[Https](https://github.com/middlewares/https)**
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/https.svg?style=plastic)](https://packagist.org/packages/middlewares/https)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/https.svg?style=plastic)
     ![License](https://img.shields.io/packagist/l/middlewares/https.svg?style=plastic)<br>
-    Redirects to `https` if the request is `http` and add the [`Strict.Transport-Security`](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security) header to protect against protocol downgrade attacks and cookie hijacking according to [RFC 6797 HTTP Strict Transport Security (HSTS)](https://tools.ietf.org/html/rfc6797).
+    Redirects to `https` if the request is `http` and add the [`Strict-Transport-Security`](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security) header to protect against protocol downgrade attacks and cookie hijacking according to [RFC 6797 HTTP Strict Transport Security (HSTS)](https://tools.ietf.org/html/rfc6797).
 * [Middlewares](https://github.com/middlewares)/**[Redirect](https://github.com/middlewares/redirect)**
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/redirect.svg?style=plastic)](https://packagist.org/packages/middlewares/redirect)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/redirect.svg?style=plastic)
@@ -233,7 +233,7 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/trailing-slash.svg?style=plastic)](https://packagist.org/packages/middlewares/trailing-slash)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/trailing-slash.svg?style=plastic)
     ![License](https://img.shields.io/packagist/l/middlewares/trailing-slash.svg?style=plastic)<br>
-    Normalizes the trailing slash of the URI path. By default removes the slash so, for example, `/post/23/` is converted to `/post/23`.
+    Normalizes the trailing slash of the URI path. By default removes the slash so, for example, `/posts/23/` is converted to `/posts/23`.
 * [Middlewares](https://github.com/middlewares)/**[Www](https://github.com/middlewares/www)**
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/www.svg?style=plastic)](https://packagist.org/packages/middlewares/www)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/www.svg?style=plastic)
@@ -246,14 +246,14 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/filesystem.svg?style=plastic)](https://packagist.org/packages/middlewares/filesystem)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/filesystem.svg?style=plastic)
     ![License](https://img.shields.io/packagist/l/middlewares/filesystem.svg?style=plastic)<br>
-    Saves or reads responses from files. It uses [Flysystem](http://flysystem.thephpleague.com/) as filesystem handler, so you can use not only a local directories, but also any other adapter like [FTP](http://flysystem.thephpleague.com/adapter/ftp/), [SFTP](http://flysystem.thephpleague.com/adapter/sftp/), [Dropbox](http://flysystem.thephpleague.com/adapter/dropbox/), etc. contains the following components:
+    Saves or reads responses from files. It uses [Flysystem](http://flysystem.thephpleague.com/) as filesystem handler, so you can use not only local directories, but also any other adapter like [FTP](http://flysystem.thephpleague.com/adapter/ftp/), [SFTP](http://flysystem.thephpleague.com/adapter/sftp/), [Dropbox](http://flysystem.thephpleague.com/adapter/dropbox/), etc. Contains the following components:
   * [Middlewares](https://github.com/middlewares)/**[Reader](https://github.com/middlewares/filesystem#reader)**
   * [Middlewares](https://github.com/middlewares)/**[Writer](https://github.com/middlewares/filesystem#writer)**
 * [Middlewares](https://github.com/middlewares)/**[ImageManipulation](https://github.com/middlewares/image-manipulation)**
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/image-manipulation.svg?style=plastic)](https://packagist.org/packages/middlewares/image-manipulation)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/image-manipulation.svg?style=plastic)
     ![License](https://img.shields.io/packagist/l/middlewares/image-manipulation.svg?style=plastic)<br>
-    Transforms images on demand, allowing resize, crop, rotate and transform to other formats. Uses [imagecow](https://github.com/oscarotero/imagecow) library that can detect and use `Gd` and `Imagick`, and also has support for [client hints](https://www.smashingmagazine.com/2016/01/leaner-responsive-images-client-hints/) and different [automatic cropping methods](https://github.com/oscarotero/imagecow#automatic-cropping). The uri is generated encoding the image path and the manipulation options with [lcobucci/jwt](https://github.com/lcobucci/jwt/) to prevent alterations and image-resize attacks.
+    Transforms images on demand, allowing resize, crop, rotate and transform to other formats. Uses [imagecow](https://github.com/oscarotero/imagecow) library that can detect and use `Gd` and `Imagick`, and also has support for [client hints](https://www.smashingmagazine.com/2016/01/leaner-responsive-images-client-hints/) and different [automatic cropping methods](https://github.com/oscarotero/imagecow#automatic-cropping). The URI is generated encoding the image path and the manipulation options with [lcobucci/jwt](https://github.com/lcobucci/jwt/) to prevent alterations and image-resize attacks.
 * [Middlewares](https://github.com/middlewares)/**[MethodOverride](https://github.com/middlewares/method-override)**
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/method-override.svg?style=plastic)](https://packagist.org/packages/middlewares/method-override)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/method-override.svg?style=plastic)
@@ -263,7 +263,7 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
       [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/payload.svg?style=plastic)](https://packagist.org/packages/middlewares/payload)
       ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/payload.svg?style=plastic)
       ![License](https://img.shields.io/packagist/l/middlewares/payload.svg?style=plastic)<br>
-      Parses the body of the request if it's not already parsed and the method is POST, PUT or DELETE. Contains the following components to support different formats:
+      Parses the body of the request if it's not already parsed and the method is `POST`, `PUT` or `DELETE`. Contains the following components to support different formats:
   * [Middlewares](https://github.com/middlewares)/**[CsvPayload](https://github.com/middlewares/payload#csvpayload)**
   * [Middlewares](https://github.com/middlewares)/**[JsonPayload](https://github.com/middlewares/payload#jsonpayload)**
   * [Middlewares](https://github.com/middlewares)/**[UrlEncodedPayload](https://github.com/middlewares/payload#urlencodepayload)**
