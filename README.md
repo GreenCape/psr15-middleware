@@ -33,6 +33,19 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
   * [Middlewares](https://github.com/middlewares)/**[ContentLanguage](https://github.com/middlewares/negotiation#contentlanguage)**
   * [Middlewares](https://github.com/middlewares)/**[ContentEncoding](https://github.com/middlewares/negotiation#contentencoding)**
 
+### Error / Exception Handling
+
+* [Middlewares](https://github.com/middlewares)/**[ErrorHandler](https://github.com/middlewares/error-handler)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/error-handler.svg?style=plastic)](https://packagist.org/packages/middlewares/error-handler)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/error-handler.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/middlewares/error-handler.svg?style=plastic)<br>
+    Executes a handler if the response returned by subsequent middleware has any error (status code `400`-`599`) or a `Middlewares\HttpErrorException` is thrown.
+* [Middlewares](https://github.com/middlewares)/**[Whoops](https://github.com/middlewares/whoops)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/whoops.svg?style=plastic)](https://packagist.org/packages/middlewares/whoops)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/whoops.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/middlewares/whoops.svg?style=plastic)<br>
+    Uses [Whoops](https://github.com/filp/whoops) as error handler.
+
 ### Development Utilities
 
 * [Middlewares](https://github.com/middlewares)/**[Debugbar](https://github.com/middlewares/debugbar)**
@@ -45,11 +58,6 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
     ![GitHub last commit](https://img.shields.io/github/last-commit/php-middleware/phpdebugbar.svg?style=plastic)
     ![License](https://img.shields.io/packagist/l/php-middleware/php-debug-bar.svg?style=plastic)<br>
     Inserts [PHP DebugBar](http://phpdebugbar.com) automatically in HTML responses.
-* [Middlewares](https://github.com/middlewares)/**[ErrorHandler](https://github.com/middlewares/error-handler)**
-    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/error-handler.svg?style=plastic)](https://packagist.org/packages/middlewares/error-handler)
-    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/error-handler.svg?style=plastic)
-    ![License](https://img.shields.io/packagist/l/middlewares/error-handler.svg?style=plastic)<br>
-    Executes a handler if the response returned by subsequent middleware has any error (status code `400`-`599`) or a `Middlewares\HttpErrorException` is thrown.
 * [PhpMiddleware](https://github.com/php-middleware) / **[Maintenance](https://github.com/php-middleware/maintenance)**
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/php-middleware/maintenance.svg?style=plastic)](https://packagist.org/packages/php-middleware/maintenance)
     ![GitHub last commit](https://img.shields.io/github/last-commit/php-middleware/maintenance.svg?style=plastic)
@@ -80,11 +88,6 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/uuid.svg?style=plastic)
     ![License](https://img.shields.io/packagist/l/middlewares/uuid.svg?style=plastic)<br>
     Generates a [RFC 4122](http://tools.ietf.org/html/rfc4122) version 4 compatible UUID (Universally Unique Identifier) using [ramsey/uuid](https://github.com/ramsey/uuid) and saves it in the `X-Uuid` header of the request and the response. Useful for debugging purposes.
-* [Middlewares](https://github.com/middlewares)/**[Whoops](https://github.com/middlewares/whoops)**
-    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/whoops.svg?style=plastic)](https://packagist.org/packages/middlewares/whoops)
-    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/whoops.svg?style=plastic)
-    ![License](https://img.shields.io/packagist/l/middlewares/whoops.svg?style=plastic)<br>
-    Uses [Whoops](https://github.com/filp/whoops) as error handler.
 
 ### Logging
 
@@ -249,6 +252,19 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
     Saves or reads responses from files. It uses [Flysystem](http://flysystem.thephpleague.com/) as filesystem handler, so you can use not only local directories, but also any other adapter like [FTP](http://flysystem.thephpleague.com/adapter/ftp/), [SFTP](http://flysystem.thephpleague.com/adapter/sftp/), [Dropbox](http://flysystem.thephpleague.com/adapter/dropbox/), etc. Contains the following components:
   * [Middlewares](https://github.com/middlewares)/**[Reader](https://github.com/middlewares/filesystem#reader)**
   * [Middlewares](https://github.com/middlewares)/**[Writer](https://github.com/middlewares/filesystem#writer)**
+* [Prooph](https://github.com/prooph)/**[HttpMiddleware](https://github.com/prooph/http-middleware)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/prooph/http-middleware.svg?style=plastic)](https://packagist.org/packages/prooph/http-middleware)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/prooph/http-middleware.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/prooph/http-middleware.svg?style=plastic)<br>
+    Consumes [Prooph](http://getprooph.org/) messages. Contains the following components:
+  * [Prooph](https://github.com/prooph)/**[CommandMiddleware](https://github.com/prooph/http-middleware)**<br>
+   Dispatches the message data to the command bus system
+  * [Prooph](https://github.com/prooph)/**[QueryMiddleware](https://github.com/prooph/http-middleware)**<br>
+   Dispatches the message data to the query bus system
+  * [Prooph](https://github.com/prooph)/**[EventMiddleware](https://github.com/prooph/http-middleware)**<br>
+   Dispatches the message data to the event bus system
+  * [Prooph](https://github.com/prooph)/**[MessageMiddleware](https://github.com/prooph/http-middleware)**<br>
+   Dispatches the message data to the appropriated bus system depending on message type
 * [Middlewares](https://github.com/middlewares)/**[ImageManipulation](https://github.com/middlewares/image-manipulation)**
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/image-manipulation.svg?style=plastic)](https://packagist.org/packages/middlewares/image-manipulation)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/image-manipulation.svg?style=plastic)
