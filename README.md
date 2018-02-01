@@ -8,8 +8,8 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/tuupola/branca-middleware.svg?style=plastic)](https://packagist.org/packages/tuupola/branca-middleware)
     ![GitHub last commit](https://img.shields.io/github/last-commit/tuupola/branca-middleware.svg?style=plastic)
     ![License](https://img.shields.io/packagist/l/tuupola/branca-middleware.svg?style=plastic)<br>
-    Implements [Branca token](https://github.com/tuupola/branca-spec) authentication. Branca is similar to JWT but more secure and has smaller token size.
-    Does **not** implement OAuth authorization server nor does it provide ways to generate, issue or store the authentication tokens.
+    Implements [Branca Token Authentication](https://github.com/tuupola/branca-spec). Branca is similar to JWT but more secure and has smaller token size.
+    Does not implement OAuth authorization server nor does it provide ways to generate, issue or store the authentication tokens.
     Only parses and authenticates a token when passed via header or cookie.
 * [Middlewares](https://github.com/middlewares)/**[HttpAuthentication](https://github.com/middlewares/http-authentication)**
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/http-authentication.svg?style=plastic)](https://packagist.org/packages/middlewares/http-authentication)
@@ -27,7 +27,7 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/tuupola/slim-jwt-auth.svg?style=plastic)](https://packagist.org/packages/tuupola/slim-jwt-auth)
     ![GitHub last commit](https://img.shields.io/github/last-commit/tuupola/slim-jwt-auth.svg?style=plastic)
     ![License](https://img.shields.io/packagist/l/tuupola/slim-jwt-auth.svg?style=plastic)<br>
-    Implements JSON Web Token Authentication.
+    Implements [RFC 7519 JSON Web Token Authentication](https://tools.ietf.org/html/rfc7519).
     Does not implement OAuth 2.0 authorization server nor does it provide ways to generate, issue or store authentication tokens.
     Only parses and authenticates a token when passed via header or cookie.
 
@@ -349,4 +349,10 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
   * [Middlewares](https://github.com/middlewares)/**[JsonPayload](https://github.com/middlewares/payload#jsonpayload)**
   * [Middlewares](https://github.com/middlewares)/**[UrlEncodedPayload](https://github.com/middlewares/payload#urlencodepayload)**
 
+## Contributing
 
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+## License
+
+[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
