@@ -4,6 +4,13 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
  
 ### Authentication
 
+* [Tuupola](https://github.com/tuupola)/**[BrancaAuthentication](https://github.com/tuupola/branca-middleware)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/tuupola/branca-middleware.svg?style=plastic)](https://packagist.org/packages/tuupola/branca-middleware)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/tuupola/branca-middleware.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/tuupola/branca-middleware.svg?style=plastic)<br>
+    Implements [Branca token](https://github.com/tuupola/branca-spec) authentication. Branca is similar to JWT but more secure and has smaller token size.
+    Does **not** implement OAuth authorization server nor does it provide ways to generate, issue or store the authentication tokens.
+    Only parses and authenticates a token when passed via header or cookie.
 * [Middlewares](https://github.com/middlewares)/**[HttpAuthentication](https://github.com/middlewares/http-authentication)**
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/http-authentication.svg?style=plastic)](https://packagist.org/packages/middlewares/http-authentication)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/http-authentication.svg?style=plastic)
@@ -11,6 +18,18 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
     Implements [RFC 2617 Http Authentication](https://tools.ietf.org/html/rfc2617). Contains the following components:
   * [Middlewares](https://github.com/middlewares)/**[BasicAuthentication](https://github.com/middlewares/http-authentication#basicauthentication)**
   * [Middlewares](https://github.com/middlewares)/**[DigestAuthentication](https://github.com/middlewares/http-authentication#digestauthentication)**
+* [Tuupola](https://github.com/tuupola)/**[HttpBasicAuthentication](https://github.com/tuupola/slim-basic-auth)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/tuupola/slim-basic-auth.svg?style=plastic)](https://packagist.org/packages/tuupola/slim-basic-auth)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/tuupola/slim-basic-auth.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/tuupola/slim-basic-auth.svg?style=plastic)<br>
+    Implements [HTTP Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication). Supports different authenticators.
+* [Tuupola](https://github.com/tuupola)/**[JwtAuthentication](https://github.com/tuupola/slim-jwt-auth)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/tuupola/slim-jwt-auth.svg?style=plastic)](https://packagist.org/packages/tuupola/slim-jwt-auth)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/tuupola/slim-jwt-auth.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/tuupola/slim-jwt-auth.svg?style=plastic)<br>
+    Implements JSON Web Token Authentication.
+    Does not implement OAuth 2.0 authorization server nor does it provide ways to generate, issue or store authentication tokens.
+    Only parses and authenticates a token when passed via header or cookie.
 
 ### Client Info
 
@@ -78,6 +97,11 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/response-time.svg?style=plastic)
     ![License](https://img.shields.io/packagist/l/middlewares/response-time.svg?style=plastic)<br>
     Calculates the response time (in miliseconds) and saves it into the `X-Response-Time` header.
+* [Tuupola](https://github.com/tuupola)/**[ServerTiming](https://github.com/tuupola/server-timing-middleware)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/tuupola/server-timing-middleware.svg?style=plastic)](https://packagist.org/packages/tuupola/server-timing-middleware)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/tuupola/server-timing-middleware.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/tuupola/server-timing-middleware.svg?style=plastic)<br>
+    Implements the [Server-Timing](http://wicg.github.io/server-timing/) header which can be used for displaying server side timing information on Chrome DevTools.
 * [Middlewares](https://github.com/middlewares)/**[Shutdown](https://github.com/middlewares/shutdown)**
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/shutdown.svg?style=plastic)](https://packagist.org/packages/middlewares/shutdown)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/shutdown.svg?style=plastic)
@@ -165,7 +189,12 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/cors.svg?style=plastic)](https://packagist.org/packages/middlewares/cors)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/cors.svg?style=plastic)
     ![License](https://img.shields.io/packagist/l/middlewares/cors.svg?style=plastic)<br>
-    Implements Cross-Origin Resource Sharing (CORS) using [neomerx/cors-psr7](https://github.com/neomerx/cors-psr7).
+    Implements [Cross-Origin Resource Sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) (CORS) using [neomerx/cors-psr7](https://github.com/neomerx/cors-psr7).
+* [Tuupola](https://github.com/tuupola)/**[Cors](https://github.com/tuupola/cors-middleware)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/tuupola/cors-middleware.svg?style=plastic)](https://packagist.org/packages/tuupola/cors-middleware)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/tuupola/cors-middleware.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/tuupola/cors-middleware.svg?style=plastic)<br>
+    Implements [Cross-Origin Resource Sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
 * [Middlewares](https://github.com/middlewares)/**[Csp](https://github.com/middlewares/csp)**
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/csp.svg?style=plastic)](https://packagist.org/packages/middlewares/csp)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/csp.svg?style=plastic)
