@@ -355,4 +355,13 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## License
 
+This list is curated by Niels Braczek.
+
 [![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+To the extent possible under law, the person who associated CC0 with
+this list has waived all copyright and related or neighboring rights
+to this list.
+
+You should have received a copy of the [CC0 legalcode](LICENSE.md) along with this
+work.  If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
