@@ -31,6 +31,27 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
     Does not implement OAuth 2.0 authorization server nor does it provide ways to generate, issue or store authentication tokens.
     Only parses and authenticates a token when passed via header or cookie.
 
+### Cache
+
+* [Middlewares](https://github.com/middlewares)/**[Cache](https://github.com/middlewares/cache)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/cache.svg?style=plastic)](https://packagist.org/packages/middlewares/cache)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/cache.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/middlewares/cache.svg?style=plastic)<br>
+    Adds cache support.
+  * [Middlewares](https://github.com/middlewares)/**[Cache](https://github.com/middlewares/cache#cache)**<br>
+  Saves the response headers in a [PSR-6 cache pool](http://www.php-fig.org/psr/psr-6/) and returns `304 Not modified` responses if the response is still valid.
+  * [Middlewares](https://github.com/middlewares)/**[CachePrevention](https://github.com/middlewares/cache#cacheprevention)**<br>
+  Adds response headers for cache prevention. Useful in development environments.
+  * [Middlewares](https://github.com/middlewares)/**[Expires](https://github.com/middlewares/cache#expires)**<br>
+  Adds the `Expires` and `Cache-Control: max-age` headers to the response.
+* [Middlewares](https://github.com/middlewares)/**[Filesystem](https://github.com/middlewares/filesystem)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/filesystem.svg?style=plastic)](https://packagist.org/packages/middlewares/filesystem)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/filesystem.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/middlewares/filesystem.svg?style=plastic)<br>
+    Saves or reads responses from files. It uses [Flysystem](http://flysystem.thephpleague.com/) as filesystem handler, so you can use not only local directories, but also any other adapter like [FTP](http://flysystem.thephpleague.com/adapter/ftp/), [SFTP](http://flysystem.thephpleague.com/adapter/sftp/), [Dropbox](http://flysystem.thephpleague.com/adapter/dropbox/), etc. Contains the following components:
+  * [Middlewares](https://github.com/middlewares)/**[Reader](https://github.com/middlewares/filesystem#reader)**
+  * [Middlewares](https://github.com/middlewares)/**[Writer](https://github.com/middlewares/filesystem#writer)**
+
 ### Client Info
 
 * [Middlewares](https://github.com/middlewares)/**[ClientIp](https://github.com/middlewares/client-ip)**
@@ -52,18 +73,23 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
   * [Middlewares](https://github.com/middlewares)/**[ContentLanguage](https://github.com/middlewares/negotiation#contentlanguage)**
   * [Middlewares](https://github.com/middlewares)/**[ContentEncoding](https://github.com/middlewares/negotiation#contentencoding)**
 
-### Error / Exception Handling
+### Compression
 
-* [Middlewares](https://github.com/middlewares)/**[ErrorHandler](https://github.com/middlewares/error-handler)**
-    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/error-handler.svg?style=plastic)](https://packagist.org/packages/middlewares/error-handler)
-    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/error-handler.svg?style=plastic)
-    ![License](https://img.shields.io/packagist/l/middlewares/error-handler.svg?style=plastic)<br>
-    Executes a handler if the response returned by subsequent middleware has any error (status code `400`-`599`) or a `Middlewares\HttpErrorException` is thrown.
-* [Middlewares](https://github.com/middlewares)/**[Whoops](https://github.com/middlewares/whoops)**
-    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/whoops.svg?style=plastic)](https://packagist.org/packages/middlewares/whoops)
-    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/whoops.svg?style=plastic)
-    ![License](https://img.shields.io/packagist/l/middlewares/whoops.svg?style=plastic)<br>
-    Uses [Whoops](https://github.com/filp/whoops) as error handler.
+* [Middlewares](https://github.com/middlewares)/**[Encoder](https://github.com/middlewares/encoder)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/encoder.svg?style=plastic)](https://packagist.org/packages/middlewares/encoder)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/encoder.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/middlewares/encoder.svg?style=plastic)<br>
+    Encodes the response body with `gzip` or `deflate` if the `Accept-Encoding` header is present and adds the `Content-Encoding` header. Contains the following components:
+  * [Middlewares](https://github.com/middlewares)/**[DeflateEncoder](https://github.com/middlewares/encoder#deflateencoder)**
+  * [Middlewares](https://github.com/middlewares)/**[GzipEncoder](https://github.com/middlewares/encoder#gzipencoder)**
+* [Middlewares](https://github.com/middlewares)/**[Minifier](https://github.com/middlewares/minifier)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/minifier.svg?style=plastic)](https://packagist.org/packages/middlewares/minifier)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/minifier.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/middlewares/minifier.svg?style=plastic)<br>
+    Minifies HTML, CSS and Javascript content using [mrclay/minify](https://github.com/mrclay/minify). Contains the following components:
+  * [Middlewares](https://github.com/middlewares)/**[CssMinifier](https://github.com/middlewares/minifier#cssminifier)**
+  * [Middlewares](https://github.com/middlewares)/**[HtmlMinifier](https://github.com/middlewares/minifier#htmlminifier)**
+  * [Middlewares](https://github.com/middlewares)/**[JsMinifier](https://github.com/middlewares/minifier#jsminifier)**
 
 ### Development Utilities
 
@@ -113,6 +139,19 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
     ![License](https://img.shields.io/packagist/l/middlewares/uuid.svg?style=plastic)<br>
     Generates a [RFC 4122](http://tools.ietf.org/html/rfc4122) version 4 compatible UUID (Universally Unique Identifier) using [ramsey/uuid](https://github.com/ramsey/uuid) and saves it in the `X-Uuid` header of the request and the response. Useful for debugging purposes.
 
+### Error / Exception Handling
+
+* [Middlewares](https://github.com/middlewares)/**[ErrorHandler](https://github.com/middlewares/error-handler)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/error-handler.svg?style=plastic)](https://packagist.org/packages/middlewares/error-handler)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/error-handler.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/middlewares/error-handler.svg?style=plastic)<br>
+    Executes a handler if the response returned by subsequent middleware has any error (status code `400`-`599`) or a `Middlewares\HttpErrorException` is thrown.
+* [Middlewares](https://github.com/middlewares)/**[Whoops](https://github.com/middlewares/whoops)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/whoops.svg?style=plastic)](https://packagist.org/packages/middlewares/whoops)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/whoops.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/middlewares/whoops.svg?style=plastic)<br>
+    Uses [Whoops](https://github.com/filp/whoops) as error handler.
+
 ### Logging
 
 * [Middlewares](https://github.com/middlewares)/**[AccessLog](https://github.com/middlewares/access-log)**
@@ -131,34 +170,40 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
     ![License](https://img.shields.io/packagist/l/php-middleware/log-http-messages.svg?style=plastic)<br>
     Provides logging of request and response messages to a [PSR-3 log implementation](https://packagist.org/providers/psr/log-implementation).
 
-### Optimization
+### Proxy
 
-* [Middlewares](https://github.com/middlewares)/**[Cache](https://github.com/middlewares/cache)**
-    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/cache.svg?style=plastic)](https://packagist.org/packages/middlewares/cache)
-    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/cache.svg?style=plastic)
-    ![License](https://img.shields.io/packagist/l/middlewares/cache.svg?style=plastic)<br>
-    Adds cache support.
-  * [Middlewares](https://github.com/middlewares)/**[Cache](https://github.com/middlewares/cache#cache)**<br>
-  Saves the response headers in a [PSR-6 cache pool](http://www.php-fig.org/psr/psr-6/) and returns `304 Not modified` responses if the response is still valid.
-  * [Middlewares](https://github.com/middlewares)/**[CachePrevention](https://github.com/middlewares/cache#cacheprevention)**<br>
-  Adds response headers for cache prevention. Useful in development environments.
-  * [Middlewares](https://github.com/middlewares)/**[Expires](https://github.com/middlewares/cache#expires)**<br>
-  Adds the `Expires` and `Cache-Control: max-age` headers to the response.
-* [Middlewares](https://github.com/middlewares)/**[Encoder](https://github.com/middlewares/encoder)**
-    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/encoder.svg?style=plastic)](https://packagist.org/packages/middlewares/encoder)
-    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/encoder.svg?style=plastic)
-    ![License](https://img.shields.io/packagist/l/middlewares/encoder.svg?style=plastic)<br>
-    Encodes the response body with `gzip` or `deflate` if the `Accept-Encoding` header is present and adds the `Content-Encoding` header. Contains the following components:
-  * [Middlewares](https://github.com/middlewares)/**[DeflateEncoder](https://github.com/middlewares/encoder#deflateencoder)**
-  * [Middlewares](https://github.com/middlewares)/**[GzipEncoder](https://github.com/middlewares/encoder#gzipencoder)**
-* [Middlewares](https://github.com/middlewares)/**[Minifier](https://github.com/middlewares/minifier)**
-    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/minifier.svg?style=plastic)](https://packagist.org/packages/middlewares/minifier)
-    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/minifier.svg?style=plastic)
-    ![License](https://img.shields.io/packagist/l/middlewares/minifier.svg?style=plastic)<br>
-    Minifies HTML, CSS and Javascript content using [mrclay/minify](https://github.com/mrclay/minify). Contains the following components:
-  * [Middlewares](https://github.com/middlewares)/**[CssMinifier](https://github.com/middlewares/minifier#cssminifier)**
-  * [Middlewares](https://github.com/middlewares)/**[HtmlMinifier](https://github.com/middlewares/minifier#htmlminifier)**
-  * [Middlewares](https://github.com/middlewares)/**[JsMinifier](https://github.com/middlewares/minifier#jsminifier)**
+* [Middlewares](https://github.com/middlewares)/**[Proxy](https://github.com/middlewares/proxy)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/proxy.svg?style=plastic)](https://packagist.org/packages/middlewares/proxy)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/proxy.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/middlewares/proxy.svg?style=plastic)<br>
+    Creates an HTTP proxy using [Guzzle](https://github.com/guzzle/guzzle).
+* [Ellipse](https://github.com/ellipsephp)/**[ScopedMiddleware](https://github.com/ellipsephp/middleware-scoped)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/ellipsephp/middleware-scoped.svg?style=plastic)](https://packagist.org/packages/ellipsephp/middleware-scoped)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/ellipsephp/middleware-scoped.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/ellipsephp/middleware-scoped.svg?style=plastic)<br>
+    Proxies other middleware based on URL condition. Contains the following components: 
+  * [Ellipse](https://github.com/ellipsephp)/**[BasepathBasedMiddleware](https://github.com/ellipsephp/middleware-scoped)**<br>
+  * [Ellipse](https://github.com/ellipsephp)/**[HostBasedMiddleware](https://github.com/ellipsephp/middleware-scoped)**<br>
+  * [Ellipse](https://github.com/ellipsephp)/**[SchemeBasedMiddleware](https://github.com/ellipsephp/middleware-scoped)**<br>
+  * [Ellipse](https://github.com/ellipsephp)/**[UrlPartBasedMiddleware](https://github.com/ellipsephp/middleware-scoped)**<br>
+
+### Robots
+
+* [PhpMiddleware](https://github.com/php-middleware) / **[BlockRobots](https://github.com/php-middleware/block-robots)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/php-middleware/block-robots.svg?style=plastic)](https://packagist.org/packages/php-middleware/block-robots)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/php-middleware/block-robots.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/php-middleware/block-robots.svg?style=plastic)<br>
+    Enables/disables the robots of the search engines for non-production environment. Automatically adds the `X-Robots-Tag` header in all responses and returns a default body for `/robots.txt` request.
+* [Middlewares](https://github.com/middlewares)/**[Recaptcha](https://github.com/middlewares/recaptcha)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/recaptcha.svg?style=plastic)](https://packagist.org/packages/middlewares/recaptcha)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/recaptcha.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/middlewares/recaptcha.svg?style=plastic)<br>
+     Uses [Google reCAPTCHA](https://github.com/google/recaptcha) library for spam prevention. Returns a `403` response if the request is not valid.
+* [Middlewares](https://github.com/middlewares)/**[Robots](https://github.com/middlewares/robots)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/robots.svg?style=plastic)](https://packagist.org/packages/middlewares/robots)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/robots.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/middlewares/robots.svg?style=plastic)<br>
+    Enables/disables the robots of the search engines for non-production environment. Automatically adds the `X-Robots-Tag` header in all responses and returns a default body for `/robots.txt` request.
 
 ### Router
 
@@ -177,14 +222,22 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/request-handler.svg?style=plastic)
     ![License](https://img.shields.io/packagist/l/middlewares/request-handler.svg?style=plastic)<br>
     Executes request handlers discovered by a router.
+* [Ellipse](https://github.com/ellipsephp)/**[Router](https://github.com/ellipsephp/router-adapter)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/ellipsephp/router-adapter.svg?style=plastic)](https://packagist.org/packages/ellipsephp/router-adapter)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/ellipsephp/router-adapter.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/ellipsephp/router-adapter.svg?style=plastic)<br>
+    Provides different routers. Supported are:
+  * [Ellipse](https://github.com/ellipsephp)/**[AuraRouter](https://github.com/ellipsephp/router-aura)**
+      [![Latest Version on Packagist](https://img.shields.io/packagist/v/ellipsephp/router-aura.svg?style=plastic)](https://packagist.org/packages/ellipsephp/router-aura)
+      ![GitHub last commit](https://img.shields.io/github/last-commit/ellipsephp/router-aura.svg?style=plastic)
+      ![License](https://img.shields.io/packagist/l/ellipsephp/router-aura.svg?style=plastic)<br>
+  * [Ellipse](https://github.com/ellipsephp)/**[FastRoute](https://github.com/ellipsephp/router-fastroute)**
+      [![Latest Version on Packagist](https://img.shields.io/packagist/v/ellipsephp/router-fastroute.svg?style=plastic)](https://packagist.org/packages/ellipsephp/router-fastroute)
+      ![GitHub last commit](https://img.shields.io/github/last-commit/ellipsephp/router-fastroute.svg?style=plastic)
+      ![License](https://img.shields.io/packagist/l/ellipsephp/router-fastroute.svg?style=plastic)<br>
 
 ### Security
 
-* [PhpMiddleware](https://github.com/php-middleware) / **[BlockRobots](https://github.com/php-middleware/block-robots)**
-    [![Latest Version on Packagist](https://img.shields.io/packagist/v/php-middleware/block-robots.svg?style=plastic)](https://packagist.org/packages/php-middleware/block-robots)
-    ![GitHub last commit](https://img.shields.io/github/last-commit/php-middleware/block-robots.svg?style=plastic)
-    ![License](https://img.shields.io/packagist/l/php-middleware/block-robots.svg?style=plastic)<br>
-    Enables/disables the robots of the search engines for non-production environment. Automatically adds the `X-Robots-Tag` header in all responses and returns a default body for `/robots.txt` request.
 * [Middlewares](https://github.com/middlewares)/**[Cors](https://github.com/middlewares/cors)**
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/cors.svg?style=plastic)](https://packagist.org/packages/middlewares/cors)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/cors.svg?style=plastic)
@@ -215,21 +268,11 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/honeypot.svg?style=plastic)
     ![License](https://img.shields.io/packagist/l/middlewares/honeypot.svg?style=plastic)<br>
     Implements honeypot spam prevention. Returns a `403` response if the request is from a bot.
-* [Middlewares](https://github.com/middlewares)/**[Recaptcha](https://github.com/middlewares/recaptcha)**
-    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/recaptcha.svg?style=plastic)](https://packagist.org/packages/middlewares/recaptcha)
-    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/recaptcha.svg?style=plastic)
-    ![License](https://img.shields.io/packagist/l/middlewares/recaptcha.svg?style=plastic)<br>
-     Uses [Google reCAPTCHA](https://github.com/google/recaptcha) library for spam prevention. Returns a `403` response if the request is not valid.
 * [Middlewares](https://github.com/middlewares)/**[ReferrerSpam](https://github.com/middlewares/referrer-spam)**
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/referrer-spam.svg?style=plastic)](https://packagist.org/packages/middlewares/referrer-spam)
     ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/referrer-spam.svg?style=plastic)
     ![License](https://img.shields.io/packagist/l/middlewares/referrer-spam.svg?style=plastic)<br>
     Blocks referrer spammers using [piwik/referrer-spam-blacklist](https://github.com/matomo-org/referrer-spam-blacklist). It returns a 403 response if the URL host in the `Referer` header is in the blacklist.
-* [Middlewares](https://github.com/middlewares)/**[Robots](https://github.com/middlewares/robots)**
-    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/robots.svg?style=plastic)](https://packagist.org/packages/middlewares/robots)
-    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/robots.svg?style=plastic)
-    ![License](https://img.shields.io/packagist/l/middlewares/robots.svg?style=plastic)<br>
-    Enables/disables the robots of the search engines for non-production environment. Automatically adds the `X-Robots-Tag` header in all responses and returns a default body for `/robots.txt` request.
 
 ### Session
 
@@ -274,13 +317,6 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
 
 ### Miscellaneous
 
-* [Middlewares](https://github.com/middlewares)/**[Filesystem](https://github.com/middlewares/filesystem)**
-    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/filesystem.svg?style=plastic)](https://packagist.org/packages/middlewares/filesystem)
-    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/filesystem.svg?style=plastic)
-    ![License](https://img.shields.io/packagist/l/middlewares/filesystem.svg?style=plastic)<br>
-    Saves or reads responses from files. It uses [Flysystem](http://flysystem.thephpleague.com/) as filesystem handler, so you can use not only local directories, but also any other adapter like [FTP](http://flysystem.thephpleague.com/adapter/ftp/), [SFTP](http://flysystem.thephpleague.com/adapter/sftp/), [Dropbox](http://flysystem.thephpleague.com/adapter/dropbox/), etc. Contains the following components:
-  * [Middlewares](https://github.com/middlewares)/**[Reader](https://github.com/middlewares/filesystem#reader)**
-  * [Middlewares](https://github.com/middlewares)/**[Writer](https://github.com/middlewares/filesystem#writer)**
 * [Prooph](https://github.com/prooph)/**[HttpMiddleware](https://github.com/prooph/http-middleware)**
     [![Latest Version on Packagist](https://img.shields.io/packagist/v/prooph/http-middleware.svg?style=plastic)](https://packagist.org/packages/prooph/http-middleware)
     ![GitHub last commit](https://img.shields.io/github/last-commit/prooph/http-middleware.svg?style=plastic)
@@ -312,8 +348,5 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
   * [Middlewares](https://github.com/middlewares)/**[CsvPayload](https://github.com/middlewares/payload#csvpayload)**
   * [Middlewares](https://github.com/middlewares)/**[JsonPayload](https://github.com/middlewares/payload#jsonpayload)**
   * [Middlewares](https://github.com/middlewares)/**[UrlEncodedPayload](https://github.com/middlewares/payload#urlencodepayload)**
-* [Middlewares](https://github.com/middlewares)/**[Proxy](https://github.com/middlewares/proxy)**
-    [![Latest Version on Packagist](https://img.shields.io/packagist/v/middlewares/proxy.svg?style=plastic)](https://packagist.org/packages/middlewares/proxy)
-    ![GitHub last commit](https://img.shields.io/github/last-commit/middlewares/proxy.svg?style=plastic)
-    ![License](https://img.shields.io/packagist/l/middlewares/proxy.svg?style=plastic)<br>
-    Creates an HTTP proxy using [Guzzle](https://github.com/guzzle/guzzle).
+
+
