@@ -178,9 +178,9 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
     ![License](https://img.shields.io/packagist/l/middlewares/proxy.svg?style=plastic)<br>
     Creates an HTTP proxy using [Guzzle](https://github.com/guzzle/guzzle).
 * [Ellipse](https://github.com/ellipsephp)/**[ScopedMiddleware](https://github.com/ellipsephp/middleware-scoped)**
-    [![Latest Version on Packagist](https://img.shields.io/packagist/v/ellipsephp/middleware-scoped.svg?style=plastic)](https://packagist.org/packages/ellipsephp/middleware-scoped)
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/ellipse/middleware-scoped.svg?style=plastic)](https://packagist.org/packages/ellipse/middleware-scoped)
     ![GitHub last commit](https://img.shields.io/github/last-commit/ellipsephp/middleware-scoped.svg?style=plastic)
-    ![License](https://img.shields.io/packagist/l/ellipsephp/middleware-scoped.svg?style=plastic)<br>
+    ![License](https://img.shields.io/packagist/l/ellipse/middleware-scoped.svg?style=plastic)<br>
     Proxies other middleware based on URL condition. Contains the following components: 
   * [Ellipse](https://github.com/ellipsephp)/**[BasepathBasedMiddleware](https://github.com/ellipsephp/middleware-scoped)**<br>
   * [Ellipse](https://github.com/ellipsephp)/**[HostBasedMiddleware](https://github.com/ellipsephp/middleware-scoped)**<br>
@@ -223,18 +223,18 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
     ![License](https://img.shields.io/packagist/l/middlewares/request-handler.svg?style=plastic)<br>
     Executes request handlers discovered by a router.
 * [Ellipse](https://github.com/ellipsephp)/**[Router](https://github.com/ellipsephp/router-adapter)**
-    [![Latest Version on Packagist](https://img.shields.io/packagist/v/ellipsephp/router-adapter.svg?style=plastic)](https://packagist.org/packages/ellipsephp/router-adapter)
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/ellipse/router-adapter.svg?style=plastic)](https://packagist.org/packages/ellipse/router-adapter)
     ![GitHub last commit](https://img.shields.io/github/last-commit/ellipsephp/router-adapter.svg?style=plastic)
-    ![License](https://img.shields.io/packagist/l/ellipsephp/router-adapter.svg?style=plastic)<br>
+    ![License](https://img.shields.io/packagist/l/ellipse/router-adapter.svg?style=plastic)<br>
     Provides different routers. Supported are:
   * [Ellipse](https://github.com/ellipsephp)/**[AuraRouter](https://github.com/ellipsephp/router-aura)**
-      [![Latest Version on Packagist](https://img.shields.io/packagist/v/ellipsephp/router-aura.svg?style=plastic)](https://packagist.org/packages/ellipsephp/router-aura)
+      [![Latest Version on Packagist](https://img.shields.io/packagist/v/ellipse/router-aura.svg?style=plastic)](https://packagist.org/packages/ellipse/router-aura)
       ![GitHub last commit](https://img.shields.io/github/last-commit/ellipsephp/router-aura.svg?style=plastic)
-      ![License](https://img.shields.io/packagist/l/ellipsephp/router-aura.svg?style=plastic)<br>
+      ![License](https://img.shields.io/packagist/l/ellipse/router-aura.svg?style=plastic)<br>
   * [Ellipse](https://github.com/ellipsephp)/**[FastRoute](https://github.com/ellipsephp/router-fastroute)**
-      [![Latest Version on Packagist](https://img.shields.io/packagist/v/ellipsephp/router-fastroute.svg?style=plastic)](https://packagist.org/packages/ellipsephp/router-fastroute)
+      [![Latest Version on Packagist](https://img.shields.io/packagist/v/ellipse/router-fastroute.svg?style=plastic)](https://packagist.org/packages/ellipse/router-fastroute)
       ![GitHub last commit](https://img.shields.io/github/last-commit/ellipsephp/router-fastroute.svg?style=plastic)
-      ![License](https://img.shields.io/packagist/l/ellipsephp/router-fastroute.svg?style=plastic)<br>
+      ![License](https://img.shields.io/packagist/l/ellipse/router-fastroute.svg?style=plastic)<br>
 
 ### Security
 
