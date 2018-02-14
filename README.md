@@ -30,6 +30,20 @@ This is a curated (most likely not complete) list of **[PSR-15](https://github.c
     Implements [RFC 7519 JSON Web Token Authentication](https://tools.ietf.org/html/rfc7519).
     Does not implement OAuth 2.0 authorization server nor does it provide ways to generate, issue or store authentication tokens.
     Only parses and authenticates a token when passed via header or cookie.
+* [Zend](https://github.com/zendframework)/**[Expressive Authentication](https://github.com/zendframework/zend-expressive-authentication)**
+    [![Latest Version on Packagist](https://img.shields.io/packagist/v/zendframework/zend-expressive-authentication.svg?style=plastic)](https://packagist.org/packages/zendframework/zend-expressive-authentication)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/zendframework/zend-expressive-authentication.svg?style=plastic)
+    ![License](https://img.shields.io/packagist/l/zendframework/zend-expressive-authentication.svg?style=plastic)<br>
+    <br>
+    Provides authentication abstraction using a middleware approach for PSR-7 and PSR-15 applications. Supports different authentication adapters as separate packages:
+  * [Zend](https://github.com/zendframework)/**[BasicAccess](https://github.com/zendframework/zend-expressive-authentication-basic)**<br>
+    Implements [Basic Access Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication). Supports only `bcrypt` as the password hashing algorithm to ensure best security.
+  * [Zend](https://github.com/zendframework)/**[PhpSession](https://github.com/zendframework/zend-expressive-authentication-session)**<br>
+    Authenticates username/password credential pairs and persists them between requests via PHP sessions.
+  * [Zend](https://github.com/zendframework)/**[ZendAuthentication](https://github.com/zendframework/zend-expressive-authentication-zendauthentication)**<br>
+    Supports the [zend-authentication](https://github.com/zendframework/zend-authentication) component.
+  * [Zend](https://github.com/zendframework)/**[Expressive Authentication](https://github.com/zendframework/zend-expressive-authentication-oauth2)**<br>
+    Supports the [OAuth2](https://oauth.net/2/) authentication framework via the [league/oauth2-server](https://oauth2.thephpleague.com/) package.
 
 ### Cache
 
